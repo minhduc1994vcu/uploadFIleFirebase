@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">List of Files</div>
+  <div *ngFor="let file of fileUploads">
+    <div class="panel-body">
+      <a href="{{file.url}}">{{file.name}}</a>
+<!--      <img src="{{file.url}}" alt="ko hien thi">-->
+      <audio controls>
+        <source src= "{{file.url}}" type = "audio/mpeg">
+      </audio>
+<!--      <button (click)='deleteFileUpload(file)' class="btn btn-danger btn-xs" style="float: right">Delete</button>-->
+      <button (click)='deleteSongOnFirebase(file)' class="btn btn-danger btn-xs" style="float: right">Delete</button>
+    </div>
+  </div>
+</div><div class="panel panel-primary">
+  <div class="panel-heading">List of avatar</div>
+  <div *ngFor="let file of avatarUploads">
+    <div class="panel-body">
+      <a href="{{file.url}}">{{file.name}}</a>
+      <img src="{{file.url}}" alt="ko hien thi">
+<!--      <audio controls>-->
+<!--        <source src= "{{file.url}}" type = "audio/mpeg">-->
+<!--      </audio>-->
+<!--      <button (click)='deleteFileUpload(file)' class="btn btn-danger btn-xs" style="float: right">Delete</button>-->
+      <button (click)='deleteSongOnFirebase(file)' class="btn btn-danger btn-xs" style="float: right">Delete</button>
+    </div>
+  </div>
+</div>
